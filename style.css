@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap");
+
+/* Common-Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* styling */
+:root {
+  --white-color: #fff;
+  --dark-bg: #333;
+  --extra-dark-bg: #222;
+  --icon-color: #a79a2a;
+  --card-color: #a79a2d;
+}
+
+/* Section1 */
+
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.section-heading {
+  font-size: 12rem;
+  font-weight: 900;
+  color: var(--white-color);
+  text-transform: capitalize;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
+  text-align: center;
+}
+.section-1-icons {
+  position: relative;
+  top: -20%;
+  left: -5%;
+  transform: translate(5%, 20%);
+}
+.section-1-icons i {
+  position: absolute;
+  font-size: 35rem;
+  color: var(--icon-color);
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transform: scale(0);
+  transition: transform 0.5s ease-in;
+}
+
+.section-1-icons i.change {
+  transform: scale(1);
+  transition: transform 0.5s 0.5s ease-in-out;
+}
+
+/* Section-2 */
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--extra-dark-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 10rem 10rem;
+  justify-content: space-between;
+}
+
+.cards-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.card {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 1rem 1rem 1rem #000;
+  width: 30rem;
+  background-color: var(--card-color);
+  position: relative;
+  transition: transform 0.3s ease-in;
+}
+.card::before{
+  content: '';
+  top: 0;
+  left: -1rem;
+  height: 100%;
+  width: 1rem;
+  background-color: #817824;
+  position: absolute;
+  transform: skewY(45deg);
+  transform-origin: right;
+}
+.card::after{
+  top: -1rem;
+  transform-origin:bottom ;
+  left: 0;
+  content: '';
+  height: 1rem;
+  width: 100%;
+  background-color: #817824;
+  position: absolute;
+  transform: skewX(45deg);
+}
+.card-img {
+  width: 100%;
+  object-fit: cover;
+}
+.card-name{
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #111;
+  margin: 2rem 0;
+  
+}
+
+.card-btn{
+  width: 70%;
+  border: none;
+  background:#111;
+  color: #888;
+  border-radius: 5rem;
+  padding: 0.5rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  cursor: pointer;
+  box-shadow: -0.2rem -0.2rem -0.2rem #000;
+  
+}
+.card:hover{
+  transform: translateY(-3rem);
+}
