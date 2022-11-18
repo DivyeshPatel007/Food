@@ -18,6 +18,21 @@ setInterval(()=>{
 },4000)
 
 
+const menu = document.querySelector('.menu');
+menu.addEventListener('click',()=>{
+    const navBar = document.querySelector('.navbar'),
+          navLinks = document.querySelectorAll('.navbar-link')
+    navBar.classList.toggle('active')
+    menu.classList.toggle('active')
+    navLinks.forEach((link)=>{
+        link.classList.toggle('active')
+    })
+})
+
+
+
+
+
 
 
 
